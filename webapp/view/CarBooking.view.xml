@@ -17,7 +17,7 @@
         <content>
             <VBox
                 width="400px"
-                class="center"
+                class="margin"
             >
                 <FlexBox
                     alignItems="Center"
