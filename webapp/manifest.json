@@ -111,7 +111,7 @@
       "routes": [
         {
           "name": "RouteDemoView",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetDemoView"
           ]

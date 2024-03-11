@@ -72,7 +72,11 @@
                     width="100%"
                     class="sapMH3FontSize"
                 />
-                <FlexBox justifyContent="SpaceAround" alignItems="Center" class="sapUiSmallMarginBottom sapUiMediumMarginTop">
+                <FlexBox
+                    justifyContent="SpaceAround"
+                    alignItems="Center"
+                    class="sapUiSmallMarginBottom sapUiMediumMarginTop"
+                >
                     <!-- For name -->
                     <HBox alignItems="Center">
                         <Label
@@ -107,7 +111,10 @@
                         />
                     </HBox>
                 </FlexBox>
-                <HBox alignItems="Center" justifyContent="Center">
+                <HBox
+                    alignItems="Center"
+                    justifyContent="Center"
+                >
                     <Button
                         id="idBtnSub"
                         type="Emphasized"
@@ -117,16 +124,30 @@
                         class="sapUiSmallMarginEnd"
                     />
 
-                    <Button 
+                    <Button
                         id="idBtnHideShow"
                         type="Emphasized"
                         text="Hide"
                         press="onHideShow"
                         width="100px"
                         class="sapUiSmallMarginBegin"
-                    ></Button>
+                    />
                 </HBox>
             </VBox>
+            <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginTop">
+                <Button
+                    text="Dialog Button 1"
+                    type="Emphasized"
+                    press="onDefaultDialog"
+                    class="sapUiSmallMarginEnd"
+                />
+                <Button
+                    text="Dialog Button 2"
+                    type="Emphasized"
+                    press="onOpenDialog"
+                    class="sapUiSmallMarginEnd"
+                />
+            </HBox>
         </content>
     </Page>
 </mvc:View>

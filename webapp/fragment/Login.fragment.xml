@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        id="helloDialog"
+        title="Login Page"
+    >
+        <content>
+            <Text text="Login successful" class="sapUiSmallMargin" />
+        </content>
+        <endButton>
+            <Button text="Close" press="onCloseDialog"></Button>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

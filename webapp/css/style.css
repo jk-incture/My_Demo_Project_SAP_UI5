@@ -30,24 +30,11 @@
     margin-top: 0.8rem;
 }
 
-/* .bgImg{
-    background: url('../images/bg.jpg');
-    background-position: center center;
-    background-size: cover;
-} */
-
-.boldText{
-    font-weight: bold;
-}
-
-.margin{
+.marginAndPadding{
     margin: 2rem auto;
+    padding: 1rem;
 }
 
 .border{
     border: 1px solid;
-}
-
-.underline{
-    text-decoration: dashed;
 }
