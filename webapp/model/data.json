@@ -1,0 +1,129 @@
+{
+    "empid": "",
+    "empname": "",
+    "empdesig": "",
+    "empskill": "",
+    "empemail": "",
+    "empphone": "",
+
+    "aRelations": [
+        {
+            "relation": "Mother"
+        },
+        {
+            "relation": "Father"
+        },
+        {
+            "relation": "Brother"
+        },
+        {
+            "relation": "Sister"
+        },
+        {
+            "relation": "Uncle"
+        },
+        {
+            "relation": "Aunt"
+        }
+    ],
+    "aLanguages": [
+        {
+            "language": "Hindi"
+        },
+        {
+            "language": "Odia"
+        },
+        {
+            "language": "Telugu"
+        },
+        {
+            "language": "Tamil"
+        },
+        {
+            "language": "Kannada"
+        },
+        {
+            "language": "Bengali"
+        },
+        {
+            "language": "Marathi"
+        }
+    ],
+    "aGender": [
+        {
+            "gender": "Male"
+        },
+        {
+            "gender": "Female"
+        },
+        {
+            "gender": "Others"
+        }
+    ],
+    "aEmployees": [
+        {
+            "empid": 101,
+            "empname": "Abhinay",
+            "empdesig": "Manager",
+            "empskill": "ABAP",
+            "empemail": "abhinay@gmail.com",
+            "emploc": "Hyderabad"
+        },
+        {
+            "empid": 102,
+            "empname": "Lalit",
+            "empdesig": "Team Lead",
+            "empskill": "Java",
+            "empemail": "lalit@gmail.com",
+            "emploc": "Vijaywada"
+        },
+        {
+            "empid": 103,
+            "empname": "Gourav",
+            "empdesig": "Intern",
+            "empskill": "UI5",
+            "empemail": "gourav@gmail.com",
+            "emploc": "Delhi"
+        },
+        {
+            "empid": 104,
+            "empname": "Shristi",
+            "empdesig": "IT Lead",
+            "empskill": "Hardware",
+            "empemail": "shristi@gmail.com",
+            "emploc": "Punjab"
+        },
+        {
+            "empid": 105,
+            "empname": "Lokesh",
+            "empdesig": "HR",
+            "empskill": "Managerial Skills",
+            "empemail": "lokesh@gmail.com",
+            "emploc": "Bhubaneshwar"
+        },
+        {
+            "empid": 106,
+            "empname": "Raveena",
+            "empdesig": "PPL Manager",
+            "empskill": "React, Node",
+            "empemail": "raveena@gmail.com",
+            "emploc": "Sambalpur"
+        },
+        {
+            "empid": 101,
+            "empname": "Satish",
+            "empdesig": "SSE",
+            "empskill": "Docker",
+            "empemail": "satish@gmail.com",
+            "emploc": "Bangalore"
+        },
+        {
+            "empid": 101,
+            "empname": "Naveen",
+            "empdesig": "ASE",
+            "empskill": "Java, Spring",
+            "empemail": "naveen@gmail.com",
+            "emploc": "Indore"
+        }
+    ]
+}
