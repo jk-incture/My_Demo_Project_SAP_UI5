@@ -14,7 +14,17 @@ sap.ui.define([
                 // alert("View is created");
 
                 var oLocalModel = new JSONModel({
-                    "modelData": "testData"
+                    "modelData": "testData",
+                    "data": [
+                        {
+                            "name": "Jyotiranjan",
+                            "age": 22
+                        },
+                        {
+                            "name": "XYZ",
+                            "age": 19
+                        }
+                    ]
                 });
 
                 this.getView().setModel(oLocalModel, "oLocalModel");
@@ -28,8 +38,7 @@ sap.ui.define([
                     .then(response => response.json())
                     .then(result => {
                         users.setData(result);
-                        console.log(result)
-                        // this.getView().getModel().refresh();
+                        // console.log(result)
                     })
                     .catch(error => console.log('error : ', error));
             },
@@ -102,6 +111,18 @@ sap.ui.define([
 
             onRouteCarBooking: function () {
                 this.getOwnerComponent().getRouter().navTo("RouteCarBooking");
+            },
+
+            onRouteDialogFragments: function () {
+                this.getOwnerComponent().getRouter().navTo("RouteDialogFragments");
+            },
+
+            onRouteHCF: function(){
+                this.getOwnerComponent().getRouter().navTo("RouteHCF");
+            }, 
+
+            onRouteI18nForm: function(){
+                this.getOwnerComponent().getRouter().navTo("RouteI18nForm");
             }
         });
     });

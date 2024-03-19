@@ -6,9 +6,4 @@
         text="This is an embedded fragment. Login successful."
         class="sapUiSmallMargin"
     />
-
-    <Button
-        text="Close"
-        press="onCloseDialog"
-    />
 </core:FragmentDefinition>

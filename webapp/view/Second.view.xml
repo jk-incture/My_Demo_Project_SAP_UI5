@@ -1,6 +1,7 @@
 <mvc:View
     controllerName="com.incture.mydemoproject1.controller.Second"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     displayBlock="true"
     xmlns="sap.m"
 >
@@ -134,20 +135,36 @@
                     />
                 </HBox>
             </VBox>
-            <HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginTop">
-                <Button
-                    text="Dialog Button 1"
-                    type="Emphasized"
-                    press="onDefaultDialog"
-                    class="sapUiSmallMarginEnd"
-                />
-                <Button
-                    text="Dialog Button 2"
-                    type="Emphasized"
-                    press="onOpenDialog"
-                    class="sapUiSmallMarginEnd"
-                />
-            </HBox>
+
+            <List
+                items="{EmployeeModel>/Employees}"
+                headerText="Voters List"
+            >
+                <items>
+                    <ObjectListItem
+                        title="{EmployeeModel>Name}"
+                        number="{EmployeeModel>Country}"
+                    >
+                        <attributes>
+                            <ObjectAttribute
+                                title="Age"
+                                text="{EmployeeModel>Age}"
+                            />
+                            <ObjectAttribute
+                                title="Gender"
+                                text="{EmployeeModel>Gender}"
+                            />
+                        </attributes>
+                        <firstStatus>
+                            <ObjectStatus
+                                text="{parts: [{path: 'EmployeeModel>Name'}, {path: 'EmployeeModel>Age'}], formatter: '.formatter.getVoter'}"
+                            />
+                            <!-- Here, in the parts, the 2 paths i.e, name and age are the parameters for getVoter function in the formatter. -->
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+            
         </content>
     </Page>
 </mvc:View>

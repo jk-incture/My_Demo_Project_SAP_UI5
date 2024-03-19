@@ -31,10 +31,32 @@
 }
 
 .marginAndPadding{
-    margin: 2rem auto;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.padding{
     padding: 1rem;
 }
 
 .border{
     border: 1px solid;
+}
+
+/* .styleLabel{
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: yellow;
+} */
+
+.highColor{
+    color: red;
+}
+
+.mediumColor{
+    color: orange;
+}
+
+.lowColor{
+    color: green;
 }

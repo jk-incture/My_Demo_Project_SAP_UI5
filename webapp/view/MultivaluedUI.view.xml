@@ -203,6 +203,38 @@
                     </ColumnListItem>
                 </items>
             </Table>
+
+            <Panel
+                id="pCards"
+                expandable="true"
+                headerText="Card Details"
+                width="auto"
+                class="sapUiResponsiveMargin"
+            >
+                <content>
+                    <List
+                        id="cardList"
+                        items="{/cardDetails}"
+                        width="50%"
+                    >
+                        <items>
+                            <StandardListItem
+                                title="{=${cardCompany}.toUpperCase()} ({cardNumber})"
+                                description="{=${cardType}.toUpperCase()}, Assigned on: {assignedDate}"
+                                icon="sap-icon://credit-card"
+                                iconInset="false"
+                                highlight="{=${state} === true ? 'Success' : 'Error'}"
+                                info="{=${state} === true ? 'Active' : 'Expired'}"
+                                infoState="{=${state} === true ? 'Success' : 'Error'}"
+                                infoStateInverted="true"   
+                            />
+                            <!-- infoStateInverted set to true will show the color set by infoState -->
+                            <!-- highlight will set the highlight color to the list item -->
+                            <!-- =${} is the expression binding syntax -->
+                        </items>
+                    </List>
+                </content>
+            </Panel>
         </content>
     </Page>
 </mvc:View>

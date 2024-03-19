@@ -1,14 +1,77 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/Dialog",
-    "sap/m/Button",
-    "sap/m/Text"
-], (Controller, Dialog, Button, Text) => {
+    "sap/ui/model/json/JSONModel",
+    "../model/formatter"
+], (Controller, JSONModel, formatter) => {
     "use strict";
 
     return Controller.extend("com.incture.mydemoproject1.controller.Second", {
+        formatter: formatter,
         onInit: function () {
+            var empObject = {
+                "Employees": [
+                    {
+                        "EmpNo": 1,
+                        "Name": "Alex",
+                        "Gender": "Male",
+                        "Country": "US",
+                        "Age": 18
+                    },
+                    {
+                        "EmpNo": 2,
+                        "Name": "John",
+                        "Gender": "Male",
+                        "Country": "India",
+                        "Age": 25
+                    },
+                    {
+                        "EmpNo": 3,
+                        "Name": "Sarah",
+                        "Gender": "Female",
+                        "Country": "Brazil",
+                        "Age": 12
+                    },
+                    {
+                        "EmpNo": 4,
+                        "Name": "Ramesh",
+                        "Gender": "Male",
+                        "Country": "India",
+                        "Age": 17
+                    },
+                    {
+                        "EmpNo": 5,
+                        "Name": "Neha",
+                        "Gender": "Female",
+                        "Country": "India",
+                        "Age": 45
+                    },
+                    {
+                        "EmpNo": 6,
+                        "Name": "James",
+                        "Gender": "Male",
+                        "Country": "France",
+                        "Age": 23
+                    }
+                ]
+            }
 
+            var oModel = new JSONModel();
+            oModel.setData(empObject);
+            this.getView().setModel(oModel, "EmployeeModel");
+
+            var colorObj = {
+                "colors":[
+                    {
+                        "value": 1
+                    },
+                    {
+                        "value": 2
+                    },
+                    {
+                        "value": 3
+                    }
+                ]
+            }
         },
 
         onBack: function () {
@@ -55,62 +118,6 @@ sap.ui.define([
 
                 this.getView().byId('idBtnHideShow').setText('Hide');
             }
-        },
-
-        onDefaultDialog: function () {
-            if (!this.oDefaultDialog) {
-                this.oDefaultDialog = new Dialog({
-                    title: "Hello Dialog",
-                    content: new Text({
-                        text: "Hi, I am a Dialog"
-                    }),
-                    beginButton: new Button({
-                        // type: ButtonType.Emphasized,
-                        text: "OK",
-                        press: function () {
-                            this.oDefaultDialog.close();
-                        }.bind(this)
-                    }),
-                    endButton: new Button({
-                        // type: ButtonType.Default,
-                        text: "Close",
-                        press: function () {
-                            this.oDefaultDialog.close()
-                        }.bind(this)
-                    })
-                });
-
-                this.getView().addDependent(this.oDefaultDialog);
-            }
-            this.oDefaultDialog.open();
-        },
-
-
-        onOpenDialog() {
-            // create dialog lazily
-            this.pDialog ??= this.loadFragment({
-                name: "com.incture.mydemoproject1.fragment.Login"
-            });
-
-            this.pDialog.then((oDialog) => oDialog.open()).catch((error) => console.log(error));
-        },
-
-        // Second method
-
-        /*
-        onOpenDialog() {
-            if(!this.pDialog){
-                this.pDialog = this.loadFragment({
-                    name: "com.incture.mydemoproject1.fragment.Login"
-                });
-            }
-        
-            this.pDialog.then((oDialog) => oDialog.open());
-        },
-        */
-
-        onCloseDialog(){
-            this.pDialog.then((oDialog) => oDialog.close());
         }
     })
 });

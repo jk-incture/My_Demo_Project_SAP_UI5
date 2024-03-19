@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:table="sap.ui.table"
     controllerName="com.incture.mydemoproject1.controller.DemoView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
@@ -60,7 +60,7 @@
                     class="sapUiSmallMargin"
                     id="label1"
                     design="Bold"
-                    text="{oLocalModel>/modelData}"
+                    text="{oLocalModel>/modelData}, {oLocalModel>/data/0/name}"
                 />
 
                 <!-- GlobalModel -->
@@ -68,7 +68,7 @@
                     id="label2"
                     class="sapUiSmallMargin"
                     design="Bold"
-                    text="{oGlobalModel>/test}"
+                    text="{/test}, {/aRelations/0/relation}"
                 />
 
                 <!-- Input -->
@@ -153,42 +153,44 @@
 
                 <columns>
                     <Column>
-                        <Text text="S.No"></Text>
+                        <Text text="S.No" />
                     </Column>
                     <Column>
-                        <Text text="Name"></Text>
+                        <Text text="Name" />
                     </Column>
                     <Column>
-                        <Text text="Username"></Text>
+                        <Text text="Username" />
                     </Column>
                     <Column>
-                        <Text text="Email"></Text>
+                        <Text text="Email" />
                     </Column>
                     <Column>
-                        <Text text="Address"></Text>
+                        <Text text="Address" />
                     </Column>
                     <Column>
-                        <Text text="Phone no."></Text>
+                        <Text text="Phone no." />
                     </Column>
                     <Column>
-                        <Text text="Website"></Text>
+                        <Text text="Website" />
                     </Column>
                     <Column>
-                        <Text text="Company"></Text>
+                        <Text text="Company" />
                     </Column>
                 </columns>
 
                 <items>
                     <ColumnListItem>
                         <cells>
-                            <Text text="{users>id}"></Text>
-                            <Text text="{users>name}"></Text>
-                            <Text text="{users>username}"></Text>
-                            <Text text="{users>email}"></Text>
-                            <Text text="{users>address/street}, {users>address/suite}, {users>address/city}"></Text>
-                            <Text text="{users>phone}"></Text>
-                            <Text text="{users>website}"></Text>
-                            <Text text="{users>company/name}"></Text>
+                            <Text text="{users>id}" />
+                            <Text text="{users>name}" />
+                            <Text text="{users>username}" />
+                            <Text text="{users>email}" />
+                            <Text
+                                text="{users>address/street}, {users>address/suite}, {users>address/city}"
+                            />
+                            <Text text="{users>phone}" />
+                            <Text text="{users>website}" />
+                            <Text text="{users>company/name}" />
                         </cells>
                     </ColumnListItem>
                 </items>
@@ -222,56 +224,76 @@
 
                 <!-- It will show the content in the right of the footer -->
                 <contentRight>
-                    <FlexBox justifyContent="SpaceBetween">
-                        <Button
-                            text="Second view"
-                            id="routeSecond"
-                            type="Default"
-                            press="onRouteSecondView"
-                        />
-                        <Button
-                            text="Second view with Parameters"
-                            id="routeSecondParam"
-                            type="Default"
-                            press="onRouteSecondViewWithParams"
-                        />
-                        <Button
-                            text="Second view with query"
-                            id="routeSecondQuery"
-                            type="Default"
-                            press="onRouteSecondViewWithQuery"
-                        />
-                        <Button
-                            text="Layouts"
-                            id="routeLayouts"
-                            type="Default"
-                            press="onRouteLayouts"
-                        />
-                        <Button
-                            text="Form Validation"
-                            id="routeFormValidation"
-                            type="Default"
-                            press="onRouteFormValidation"
-                        />
-                        <Button
-                            text="Multivalued UI Elements"
-                            id="routeMultivaluedUI"
-                            type="Default"
-                            press="onRouteMultivaluedUI"
-                        />
-                        <Button
-                            text="F4 Help"
-                            id="routeF4Help"
-                            type="Default"
-                            press="onRouteF4Help"
-                        />
-                        <Button
-                            text="Car Booking"
-                            id="routeCarBooking"
-                            type="Default"
-                            press="onRouteCarBooking"
-                        />
-                    </FlexBox>
+                    <OverflowToolbar id="otb">
+                        <!-- <FlexBox justifyContent="SpaceBetween"> -->
+                            <Button
+                                text="Second view"
+                                id="routeSecond"
+                                type="Default"
+                                press="onRouteSecondView"
+                            />
+                            <Button
+                                text="Second view with Parameters"
+                                id="routeSecondParam"
+                                type="Default"
+                                press="onRouteSecondViewWithParams"
+                            />
+                            <Button
+                                text="Second view with query"
+                                id="routeSecondQuery"
+                                type="Default"
+                                press="onRouteSecondViewWithQuery"
+                            />
+                            <Button
+                                text="Layouts"
+                                id="routeLayouts"
+                                type="Default"
+                                press="onRouteLayouts"
+                            />
+                            <Button
+                                text="Form Validation"
+                                id="routeFormValidation"
+                                type="Default"
+                                press="onRouteFormValidation"
+                            />
+                            <Button
+                                text="Multivalued UI Elements"
+                                id="routeMultivaluedUI"
+                                type="Default"
+                                press="onRouteMultivaluedUI"
+                            />
+                            <Button
+                                text="F4 Help"
+                                id="routeF4Help"
+                                type="Default"
+                                press="onRouteF4Help"
+                            />
+                            <Button
+                                text="Car Booking"
+                                id="routeCarBooking"
+                                type="Default"
+                                press="onRouteCarBooking"
+                            />
+                            <Button
+                                text="Dialogs and Fragments"
+                                id="routeDialogFragments"
+                                type="Default"
+                                press="onRouteDialogFragments"
+                            />
+                            <Button
+                                text="Embedded Fragments"
+                                id="routeEmbeddedFragments"
+                                type="Default"
+                                press="onRouteHCF"
+                            />
+                            <Button
+                                text="I18n Form"
+                                id="routeI18nForm"
+                                type="Default"
+                                press="onRouteI18nForm"
+                            />
+                        <!-- </FlexBox> -->
+                    </OverflowToolbar>
                 </contentRight>
             </Bar>
         </footer>

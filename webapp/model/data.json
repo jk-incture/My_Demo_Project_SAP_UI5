@@ -1,11 +1,12 @@
 {
+    "test": "test-data",
     "empid": "",
     "empname": "",
     "empdesig": "",
     "empskill": "",
     "empemail": "",
     "empphone": "",
-
+    
     "aRelations": [
         {
             "relation": "Mother"
@@ -124,6 +125,161 @@
             "empskill": "Java, Spring",
             "empemail": "naveen@gmail.com",
             "emploc": "Indore"
+        }
+    ],
+    "cardDetails": [
+        {
+            "cardType": "Debit Card",
+            "cardNumber": "0000000000001",
+            "cardCompany": "Master Card",
+            "assignedDate": "23 Aug, 2017",
+            "state": true
+        },
+        {
+            "cardType": "Credit Card",
+            "cardNumber": "0000000000768",
+            "cardCompany": "Visa Card",
+            "assignedDate": "03 Sep, 2022",
+            "state": false
+        },
+        {
+            "cardType": "Debit Card",
+            "cardNumber": "0000000009856",
+            "cardCompany": "Rupay Card",
+            "assignedDate": "18 Mar, 2019",
+            "state": true
+        }
+    ],
+    "productList": [
+        {
+            "id": 1,
+            "productName": "Laptop",
+            "unitPrice": 499,
+            "currency": "INR",
+            "status": "Available",
+            "discountedPrice": 499
+        },
+        {
+            "id": 2,
+            "productName": "Smartphone",
+            "unitPrice": 699,
+            "currency": "INR",
+            "status": "Available",
+            "discountedPrice": 699
+        },
+        {
+            "id": 3,
+            "productName": "Headphones",
+            "unitPrice": 149,
+            "currency": "INR",
+            "status": "Out of Stock",
+            "discountedPrice": 149
+        },
+        {
+            "id": 4,
+            "productName": "Tablet",
+            "unitPrice": 399,
+            "currency": "INR",
+            "status": "Available",
+            "discountedPrice": 399
+        },
+        {
+            "id": 5,
+            "productName": "Camera",
+            "unitPrice": 549,
+            "currency": "INR",
+            "status": "Available",
+            "discountedPrice": 549
+        },
+        {
+            "id": 6,
+            "productName": "Smartwatch",
+            "unitPrice": 299,
+            "currency": "INR",
+            "status": "Out of Stock",
+            "discountedPrice": 299
+        },
+        {
+            "id": 7,
+            "productName": "Wireless Earbuds",
+            "unitPrice": 129,
+            "currency": "INR",
+            "status": "Out of Stock",
+            "discountedPrice": 129
+        },
+        {
+            "id": 8,
+            "productName": "Gaming Console",
+            "unitPrice": 499,
+            "currency": "INR",
+            "status": "Available",
+            "discountedPrice": 499
+        },
+        {
+            "id": 9,
+            "productName": "Monitor",
+            "unitPrice": 299,
+            "currency": "INR",
+            "status": "Available",
+            "discountedPrice": 299
+        },
+        {
+            "id": 10,
+            "productName": "Printer",
+            "unitPrice": 199,
+            "currency": "INR",
+            "status": "Out of Stock",
+            "discountedPrice": 199
+        }
+    ],
+    "sales": [
+        {
+            "CategoryID": 1,
+            "CategoryName": "Beverages",
+            "ProductName": "Chai",
+            "ProductSales": "4887.00"
+        },
+        {
+            "CategoryID": 2,
+            "CategoryName": "Condiments",
+            "ProductName": "Aniseed Syrup",
+            "ProductSales": "1724.00"
+        },
+        {
+            "CategoryID": 3,
+            "CategoryName": "Confections",
+            "ProductName": "Chocolade",
+            "ProductSales": "1282.01"
+        },
+        {
+            "CategoryID": 4,
+            "CategoryName": "Dairy Products",
+            "ProductName": "Flotemysost",
+            "ProductSales": "8438.76"
+        },
+        {
+            "CategoryID": 5,
+            "CategoryName": "Grains/Cereals",
+            "ProductName": "Ravioli Angelo",
+            "ProductSales": "2156.70"
+        },
+        {
+            "CategoryID": 6,
+            "CategoryName": "Meat/Poultry",
+            "ProductName": "Perth Pasties",
+            "ProductSales": "10661.93"
+        },
+        {
+            "CategoryID": 7,
+            "CategoryName": "Produce",
+            "ProductName": "Tofu",
+            "ProductSales": "6234.48"
+        },
+        {
+            "CategoryID": 8,
+            "CategoryName": "Seafood",
+            "ProductName": "Escargots de Bourgogne",
+            "ProductSales": "2076.28"
         }
     ]
 }

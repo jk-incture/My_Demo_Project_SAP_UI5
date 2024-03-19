@@ -78,7 +78,9 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.incture.mydemoproject1.i18n.i18n"
+          "bundleName": "com.incture.mydemoproject1.i18n.i18n",
+          "supportedLocales": ["en", "ar", "fr"],
+          "fallbackLocale": "en"
         }
       },
       "invoice": {
@@ -185,6 +187,27 @@
           "target":[
             "TargetCarBooking"
           ]
+        },
+        {
+          "name": "RouteDialogFragments",
+          "pattern": "dialogfragments",
+          "target": [
+            "TargetDialogFragments"
+          ]
+        },
+        {
+          "name": "RouteHCF",
+          "pattern": "hcf",
+          "target": [
+            "TargetHCF"
+          ]
+        },
+        {
+          "name": "RouteI18nForm",
+          "pattern": "i18nform",
+          "target": [
+            "TargetI18nForm"
+          ]
         }
       ],
 
@@ -258,6 +281,27 @@
           "clearControlAggregation": false,
           "viewId": "CarBooking",
           "viewName": "CarBooking"
+        },
+        "TargetDialogFragments": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "DialogFragments",
+          "viewName": "DialogFragments"
+        },
+        "TargetHCF": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "HCF",
+          "viewName": "HCF"
+        },
+        "TargetI18nForm": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "I18nForm",
+          "viewName": "I18nForm"
         }
       }
     },
